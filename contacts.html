@@ -4,95 +4,215 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Relationship Insight</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
-      color: #222;
-      background: #f8f7f5;
       margin: 0;
-    }
-    header {
-      background: #fff;
-      padding: 22px;
-      border-bottom: 1px solid #ddd;
-    }
-    header a {
-      text-decoration: none;
+      font-family: Arial, Helvetica, sans-serif;
       color: #222;
-      font-size: 22px;
-      font-weight: bold;
+      background: #f7f5f3;
+      line-height: 1.7;
     }
-    main {
-      max-width: 850px;
-      margin: 50px auto;
-      padding: 0 25px;
-      background: #fff;
-    }
-    h1 {
-      padding-top: 35px;
-    }
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      margin-top: 50px;
-      background: #222;
-      color: #ddd;
-    }
-    footer a {
-      color: #fff;
-      margin: 0 8px;
+
+    a {
       text-decoration: none;
+    }
+
+    nav {
+      background: white;
+      border-bottom: 1px solid #e5e2df;
+      padding: 18px 6%;
+    }
+
+    .nav-inner {
+      max-width: 1150px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .hero {
+      min-height: 390px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,.42), rgba(0,0,0,.48)),
+        url("07-contact.jpg") center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 900px;
+      margin: auto;
+      padding: 70px 6%;
+      width: 100%;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 64px);
+      margin: 0 0 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      max-width: 650px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 25px;
+    }
+
+    .content-box {
+      background: white;
+      padding: 45px;
+      border-radius: 14px;
+      box-shadow: 0 10px 35px rgba(0,0,0,.06);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    .contact-note {
+      margin-top: 30px;
+      padding: 22px;
+      background: #f1eeeb;
+      border-radius: 10px;
+    }
+
+    footer {
+      background: #1d1d1d;
+      color: #aaa;
+      padding: 40px 6%;
+      text-align: center;
+    }
+
+    footer a {
+      color: #ddd;
+      margin: 0 12px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .content-box {
+        padding: 28px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-<header>
-  <a href="index.html">Relationship Insight</a>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">Relationship Insight</a>
+
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-content">
+    <h1>Contact Us</h1>
+    <p>
+      Questions, feedback or suggestions? We'd love to hear from you.
+    </p>
+  </div>
 </header>
 
 <main>
 
-  <h1>Contact Us</h1>
+  <div class="content-box">
 
-  <p>
-    Thank you for visiting Relationship Insight.
-  </p>
+    <h2>Get in Touch</h2>
 
-  <p>
-    If you have questions, feedback, or concerns regarding the information
-    published on this website, you can contact us by email.
-  </p>
+    <p>
+      Thank you for visiting Relationship Insight.
+      If you have questions, feedback, or concerns about our website,
+      you can contact us using the information provided below.
+    </p>
 
-  <p>
-    <strong>Email:</strong> contact@relationshipinsight.com
-  </p>
+    <div class="contact-note">
 
-  <p>
-    We aim to respond to inquiries as soon as reasonably possible.
-  </p>
+      <h3>Email</h3>
 
-  <h2>Affiliate Products</h2>
+      <p>
+        Our contact email will be provided here.
+      </p>
 
-  <p>
-    For questions regarding purchases, refunds, orders, or products purchased
-    through an external website, please contact the product's official
-    seller or support team directly.
-  </p>
+    </div>
+
+    <h2>Questions About Products</h2>
+
+    <p>
+      If you have questions about a product purchased through an external
+      website, including orders, payments, refunds or account issues,
+      please contact the official seller or support team of that product.
+    </p>
+
+    <h2>Affiliate Disclosure</h2>
+
+    <p>
+      Some links on Relationship Insight are affiliate links. If you purchase
+      a product through one of these links, we may receive a commission at
+      no additional cost to you.
+    </p>
+
+  </div>
 
 </main>
 
 <footer>
-  <p>
+
+  <div>
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="privacy.html">Privacy Policy</a>
     <a href="terms.html">Terms</a>
+  </div>
+
+  <p>
+    © 2026 Relationship Insight. All rights reserved.
   </p>
 
-  <p>© 2026 Relationship Insight. All rights reserved.</p>
 </footer>
 
 </body>
