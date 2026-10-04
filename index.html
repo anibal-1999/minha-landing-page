@@ -4,161 +4,348 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Relationship Insight | Understanding Attraction & Connection</title>
+  <title>Relationship Insight | Attraction, Communication & Connection</title>
 
-  <meta name="description" content="Explore practical insights about attraction, communication and emotional connection in relationships.">
+  <meta name="description" content="Explore educational insights about attraction, communication, confidence and emotional connection in relationships.">
 
   <style>
     * {
       box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
+      margin: 0;
       font-family: Arial, Helvetica, sans-serif;
+      color: #252525;
+      background: #f7f5f3;
       line-height: 1.7;
-      color: #222;
-      background: #f8f7f5;
     }
 
-    .container {
-      width: 90%;
-      max-width: 1050px;
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e8e5e2;
+      padding: 18px 6%;
+    }
+
+    .nav-inner {
+      max-width: 1150px;
       margin: auto;
-    }
-
-    header {
-      background: #ffffff;
-      padding: 22px 0;
-      border-bottom: 1px solid #e8e8e8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
     }
 
     .logo {
-      font-size: 24px;
+      font-size: 21px;
       font-weight: bold;
       color: #222;
     }
 
+    .nav-links {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #111;
+    }
+
+    /* HERO */
+
     .hero {
-      background: #ffffff;
-      padding: 75px 0;
-      text-align: center;
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.48)),
+        url("01-hero.jpg") center/cover no-repeat;
+      color: white;
+    }
+
+    .hero-content {
+      max-width: 1150px;
+      width: 100%;
+      margin: auto;
+      padding: 80px 6%;
+    }
+
+    .hero-content span {
+      display: inline-block;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+      opacity: 0.9;
     }
 
     .hero h1 {
-      font-size: 44px;
-      line-height: 1.2;
-      max-width: 850px;
-      margin: 0 auto 25px;
+      max-width: 760px;
+      font-size: clamp(40px, 6vw, 70px);
+      line-height: 1.08;
+      margin: 0 0 25px;
     }
 
     .hero p {
-      font-size: 20px;
-      color: #666;
+      max-width: 650px;
+      font-size: 19px;
+      margin-bottom: 35px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #222;
+      color: white;
+      padding: 15px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #000;
+    }
+
+    .button.light {
+      background: white;
+      color: #222;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 85px 6%;
+    }
+
+    .container {
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    .section-heading {
+      text-align: center;
       max-width: 720px;
-      margin: auto;
+      margin: 0 auto 50px;
     }
 
-    .section {
-      padding: 65px 0;
+    .section-heading h2 {
+      font-size: 38px;
+      line-height: 1.2;
+      margin-bottom: 15px;
     }
 
-    .section-white {
-      background: #ffffff;
+    .section-heading p {
+      color: #666;
     }
 
-    h2 {
-      font-size: 32px;
-      margin-bottom: 22px;
-    }
-
-    h3 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-
-    p {
-      margin-bottom: 18px;
-    }
-
-    .intro {
-      max-width: 800px;
-      margin: auto;
-    }
+    /* CARDS */
 
     .cards {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 25px;
-      margin-top: 35px;
     }
 
     .card {
-      background: #ffffff;
-      padding: 30px;
+      background: white;
       border-radius: 12px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    }
-
-    .feature {
-      background: #ffffff;
-      border-radius: 15px;
-      padding: 45px;
-      max-width: 850px;
-      margin: auto;
+      overflow: hidden;
       box-shadow: 0 8px 30px rgba(0,0,0,0.07);
     }
 
-    .button {
-      display: inline-block;
-      margin-top: 18px;
-      padding: 16px 30px;
-      background: #222;
-      color: #ffffff;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 17px;
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
     }
 
-    .button:hover {
-      opacity: 0.85;
+    .card-content {
+      padding: 28px;
     }
 
-    .small {
-      font-size: 14px;
+    .card h3 {
+      margin-top: 0;
+      font-size: 23px;
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    /* PROGRAM */
+
+    .program {
+      background: white;
+    }
+
+    .program-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .program-image {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.12);
+    }
+
+    .program-image img {
+      width: 100%;
+      height: 430px;
+      object-fit: cover;
+    }
+
+    .program-text h2 {
+      font-size: 40px;
+      line-height: 1.15;
+      margin-top: 0;
+    }
+
+    .program-text p {
+      color: #606060;
+    }
+
+    .disclosure {
+      font-size: 12px;
       color: #777;
+      margin-top: 25px;
     }
 
-    footer {
-      background: #222;
-      color: #ddd;
-      padding: 40px 0;
+    /* ABOUT PREVIEW */
+
+    .about-preview {
+      background: #eeeae6;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 14px;
+    }
+
+    .about-text h2 {
+      font-size: 38px;
+      line-height: 1.2;
+    }
+
+    /* CTA */
+
+    .cta {
+      background:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.52)),
+        url("10-footer.jpg") center/cover no-repeat;
+      color: white;
       text-align: center;
     }
 
-    footer a {
-      color: #ffffff;
-      margin: 0 8px;
-      text-decoration: none;
+    .cta h2 {
+      font-size: 42px;
+      margin-top: 0;
     }
 
-    @media (max-width: 750px) {
-      .hero h1 {
-        font-size: 34px;
+    .cta p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #1d1d1d;
+      color: #aaa;
+      padding: 45px 6%;
+      text-align: center;
+    }
+
+    footer .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #ddd;
+      font-size: 14px;
+    }
+
+    footer p {
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .nav-inner {
+        flex-direction: column;
       }
 
-      .hero p {
-        font-size: 18px;
+      .nav-links {
+        justify-content: center;
       }
 
-      .cards {
+      .cards,
+      .program-grid,
+      .about-grid {
         grid-template-columns: 1fr;
       }
 
-      .feature {
-        padding: 30px 22px;
+      .hero {
+        min-height: 600px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      section {
+        padding: 65px 5%;
+      }
+
+      .program-image img,
+      .about-image img {
+        height: 300px;
       }
     }
   </style>
@@ -166,157 +353,280 @@
 
 <body>
 
-  <header>
-    <div class="container">
-      <div class="logo">Relationship Insight</div>
+  <nav>
+    <div class="nav-inner">
+
+      <a href="index.html" class="logo">
+        Relationship Insight
+      </a>
+
+      <div class="nav-links">
+        <a href="#explore">Explore</a>
+        <a href="#program">Featured Program</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
     </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <span>Relationship Insight</span>
+
+      <h1>
+        Understanding Attraction, Communication & Emotional Connection
+      </h1>
+
+      <p>
+        Explore the psychology behind attraction and communication
+        and discover ideas that may help you approach relationships
+        with greater clarity and confidence.
+      </p>
+
+      <a class="button light" href="#program">
+        Explore the Program
+      </a>
+
+    </div>
+
   </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Understanding Attraction, Communication & Emotional Connection</h1>
 
-      <p>
-        Relationships can be complicated. Understanding attraction and communication
-        can help you approach your relationships with greater clarity and confidence.
-      </p>
-    </div>
-  </section>
+  <!-- THREE AREAS -->
 
-  <section class="section section-white">
-    <div class="container intro">
+  <section id="explore">
 
-      <h2>Why Attraction Can Feel So Complicated</h2>
-
-      <p>
-        Attraction is not simply about appearance or chemistry. Communication,
-        emotional connection, confidence and the way two people interact can all
-        influence how a relationship develops.
-      </p>
-
-      <p>
-        Sometimes, small changes in communication can make conversations feel more
-        natural and help both people understand each other better.
-      </p>
-
-      <p>
-        The goal is not to manipulate another person. Healthy relationships are
-        built around mutual interest, respect, communication and genuine connection.
-      </p>
-
-    </div>
-  </section>
-
-  <section class="section">
     <div class="container">
 
-      <h2 style="text-align:center;">Three Areas Worth Understanding</h2>
+      <div class="section-heading">
+
+        <h2>Three Areas Worth Understanding</h2>
+
+        <p>
+          Relationships are influenced by many factors. Understanding
+          communication, attraction and emotional connection can help
+          you see relationship dynamics from a different perspective.
+        </p>
+
+      </div>
+
 
       <div class="cards">
 
-        <div class="card">
-          <h3>Communication</h3>
-          <p>
-            Learn how the way you communicate can influence conversations,
-            emotional connection and mutual understanding.
-          </p>
-        </div>
+        <article class="card">
 
-        <div class="card">
-          <h3>Emotional Connection</h3>
-          <p>
-            Strong connections often develop through trust, attention,
-            shared experiences and meaningful conversations.
-          </p>
-        </div>
+          <img src="02-attraction.jpg" alt="Couple showing attraction">
 
-        <div class="card">
-          <h3>Confidence</h3>
-          <p>
-            Confidence can influence how you express yourself and how
-            comfortably you interact with someone you are interested in.
-          </p>
-        </div>
+          <div class="card-content">
+
+            <h3>Attraction</h3>
+
+            <p>
+              Attraction involves more than appearance. Confidence,
+              communication, personality and the way people interact
+              can all influence how attraction develops.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <img src="03-communication.jpg" alt="Couple communicating">
+
+          <div class="card-content">
+
+            <h3>Communication</h3>
+
+            <p>
+              The way people communicate can influence emotional
+              connection, trust and mutual understanding.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="card">
+
+          <img src="04-emotional-connection.jpg" alt="Couple sharing an emotional connection">
+
+          <div class="card-content">
+
+            <h3>Emotional Connection</h3>
+
+            <p>
+              Strong connections often develop through attention,
+              trust, meaningful conversations and shared experiences.
+            </p>
+
+          </div>
+
+        </article>
 
       </div>
+
     </div>
+
   </section>
 
-  <section class="section section-white">
+
+  <!-- FEATURED PROGRAM -->
+
+  <section class="program" id="program">
+
     <div class="container">
 
-      <div class="feature">
+      <div class="program-grid">
 
-        <h2>A Resource Worth Exploring</h2>
+        <div class="program-image">
 
-        <p>
-          If you want to explore the psychology of attraction and learn more
-          about relationship dynamics, there are educational resources that
-          go deeper into these topics.
-        </p>
+          <img src="05-program.jpg" alt="Relationship education resource">
 
-        <p>
-          One resource that you may want to explore is
-          <strong>His Secret Obsession</strong>, a relationship-focused program
-          that discusses attraction, communication and emotional dynamics.
-        </p>
+        </div>
 
-        <p>
-          We recommend reviewing the information for yourself and deciding
-          whether the material is relevant to your situation.
-        </p>
 
-        <!-- Replace YOUR_AFFILIATE_LINK with your real ClickBank HopLink -->
-        <a href="https://a9c91vvdqzr2pw15pp63dins80.hop.clickbank.net" class="button" target="_blank" rel="nofollow sponsored noopener">
-          Learn More About The Program
-        </a>
+        <div class="program-text">
 
-        <p class="small" style="margin-top:25px;">
-          Disclosure: This page contains an affiliate link. If you purchase
-          through our link, we may receive a commission at no additional cost
-          to you.
-        </p>
+          <h2>
+            A Resource Worth Exploring
+          </h2>
+
+          <p>
+            If you want to explore relationship psychology,
+            attraction and communication in greater depth,
+            there are educational resources dedicated to these topics.
+          </p>
+
+          <p>
+            One resource you may want to explore is
+            <strong>His Secret Obsession</strong>, a relationship-focused
+            program discussing attraction, communication and emotional
+            dynamics.
+          </p>
+
+          <p>
+            Review the information for yourself and decide whether
+            the material is relevant to your situation.
+          </p>
+
+          <a class="button" href="https://a36295tce6pamp3aca6tu5lgxm.hop.clickbank.net">
+            Learn More About The Program
+          </a>
+
+          <p class="disclosure">
+            Affiliate disclosure: This page contains an affiliate link.
+            If you purchase through our link, we may receive a commission
+            at no additional cost to you.
+          </p>
+
+        </div>
 
       </div>
 
     </div>
+
   </section>
 
-  <section class="section">
-    <div class="container intro">
 
-      <h2>About Relationship Insight</h2>
+  <!-- ABOUT -->
 
-      <p>
-        Relationship Insight is an independent educational resource focused
-        on communication, attraction and relationship topics.
-      </p>
+  <section class="about-preview">
 
-      <p>
-        We are not affiliated with or endorsed by the creators of
-        His Secret Obsession. Product names and trademarks belong to their
-        respective owners.
-      </p>
+    <div class="container">
+
+      <div class="about-grid">
+
+        <div class="about-image">
+
+          <img src="06-about.jpg" alt="Couple enjoying a meaningful conversation">
+
+        </div>
+
+
+        <div class="about-text">
+
+          <h2>
+            A Clearer Look at Modern Relationships
+          </h2>
+
+          <p>
+            Relationship Insight is an independent educational resource
+            focused on attraction, communication, confidence and
+            emotional connection.
+          </p>
+
+          <p>
+            Our goal is to provide useful information that helps readers
+            explore relationship topics and make informed decisions
+            about resources they choose to investigate.
+          </p>
+
+          <a class="button" href="about.html">
+            Learn More About Us
+          </a>
+
+        </div>
+
+      </div>
 
     </div>
+
   </section>
+
+
+  <!-- FINAL CTA -->
+
+  <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Ready to Explore Further?
+      </h2>
+
+      <p>
+        Take a closer look at the relationship resource and decide
+        whether it is something that could be useful for you.
+      </p>
+
+      <a class="button light" href="https://a36295tce6pamp3aca6tu5lgxm.hop.clickbank.net">
+        Learn More
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
 
   <footer>
 
-    <div class="container">
+    <div class="footer-links">
 
-      <p>
-        <a href="about.html">About</a>
-        <a href="contacts.html">Contact</a>
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms</a>
-      </p>
+      <a href="about.html">About</a>
 
-      <p class="small">
-        © 2026 Relationship Insight. All rights reserved.
-      </p>
+      <a href="contact.html">Contact</a>
+
+      <a href="privacy.html">Privacy Policy</a>
+
+      <a href="terms.html">Terms</a>
 
     </div>
+
+    <p>
+      © 2026 Relationship Insight. All rights reserved.
+    </p>
 
   </footer>
 
