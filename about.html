@@ -9,7 +9,7 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.7;
-      color: #222;
+      color: #fff;
       background: #f8f7f5;
       margin: 0;
     }
@@ -30,23 +30,33 @@
     main {
       max-width: 850px;
       margin: 50px auto;
-      padding: 0 25px;
-      background: #fff;
+      padding: 0;
+      position: relative;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.65)
+      ), url("06-about.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      overflow: hidden;
     }
 
-    .about-image {
-      width: 100%;
-      display: block;
-      margin: 0 auto 30px;
-      border-radius: 10px;
+    .content {
+      padding: 45px 35px;
     }
 
     h1 {
-      padding-top: 35px;
+      padding-top: 0;
     }
 
     h2 {
       margin-top: 35px;
+    }
+
+    p {
+      color: #fff;
     }
 
     footer {
@@ -73,54 +83,56 @@
 
 <main>
 
-  <img src="06-about.jpg" alt="Relationship Insight" class="about-image">
+  <div class="content">
 
-  <h1>About Relationship Insight</h1>
+    <h1>About Relationship Insight</h1>
 
-  <p>
-    Welcome to Relationship Insight, an independent educational resource
-    focused on relationships, communication, attraction, and emotional
-    connection.
-  </p>
+    <p>
+      Welcome to Relationship Insight, an independent educational resource
+      focused on relationships, communication, attraction, and emotional
+      connection.
+    </p>
 
-  <p>
-    Our goal is to provide clear and practical information that can help
-    readers better understand relationship dynamics and make informed
-    decisions about the resources they choose to explore.
-  </p>
+    <p>
+      Our goal is to provide clear and practical information that can help
+      readers better understand relationship dynamics and make informed
+      decisions about the resources they choose to explore.
+    </p>
 
-  <h2>Our Approach</h2>
+    <h2>Our Approach</h2>
 
-  <p>
-    We believe healthy relationships are built on communication, respect,
-    mutual interest, trust, and genuine emotional connection.
-  </p>
+    <p>
+      We believe healthy relationships are built on communication, respect,
+      mutual interest, trust, and genuine emotional connection.
+    </p>
 
-  <p>
-    The information published on this website is intended for general
-    educational purposes. We do not promise specific results from any
-    product, program, or information mentioned on this website.
-  </p>
+    <p>
+      The information published on this website is intended for general
+      educational purposes. We do not promise specific results from any
+      product, program, or information mentioned on this website.
+    </p>
 
-  <h2>Independent Resource</h2>
+    <h2>Independent Resource</h2>
 
-  <p>
-    Relationship Insight is an independent website and is not the official
-    website of any product or company mentioned on this site.
-  </p>
+    <p>
+      Relationship Insight is an independent website and is not the official
+      website of any product or company mentioned on this site.
+    </p>
 
-  <p>
-    Some links on our website are affiliate links. If you purchase a product
-    through one of these links, we may receive a commission at no additional
-    cost to you.
-  </p>
+    <p>
+      Some links on our website are affiliate links. If you purchase a product
+      through one of these links, we may receive a commission at no additional
+      cost to you.
+    </p>
 
-  <h2>Questions?</h2>
+    <h2>Questions?</h2>
 
-  <p>
-    If you have questions or feedback, please visit our
-    <a href="contact.html">Contact page</a>.
-  </p>
+    <p>
+      If you have questions or feedback, please visit our
+      <a href="contact.html">Contact page</a>.
+    </p>
+
+  </div>
 
 </main>
 
